@@ -24,12 +24,6 @@ h1 {
 }
 
 /* navbar */
-.reg {
-  position: absolute;
-  right: 0px;
-  padding-right: 30px;
-}
-
 .navbar {
   overflow: hidden;
   background-color: #4941bf;
@@ -43,7 +37,7 @@ h1 {
   display: block;
   color: lightblue;
   text-align: center;
-  padding: 14px 40px;
+  padding: 13px 52px;
   text-decoration: none;
   font-size: 17px;
 }
