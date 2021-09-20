@@ -210,3 +210,163 @@ button:hover{
   cursor : pointer;
   color : #06d6a0;
 }
+
+/* Login */
+.login-form{
+    width: 350px;
+    height: 450px;
+    background: white;
+    position: relative;
+    margin: 8% auto;
+    padding: 5px;
+}
+
+.login-form h1{
+    text-align: center;
+    color: #4941bf;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+
+}
+
+.input-data{
+    top: 140px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0px;
+    margin: 5px 20px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display : block;
+    margin: 50px 50px 0 50px;
+    color: lightblue;
+    background-color: #4941bf;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.forget-pass{
+    margin-left: 20px;
+    margin-bottom: 75px;
+}
+
+.signup_link{
+    color: black;
+    margin-top: 0;
+    margin-left: 50px;
+    margin-bottom: 65px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.login-footer {
+  width: 340px;
+  background-color: white;
+  align-items: center;
+  padding: 7px;
+}
+
+.login-footer .login-copy {
+  font-family: Arial, Helvetica, sans-serif;
+  color: lightblue;
+  text-align: center;
+  font-size: 12px;
+}
+
+.login-footer img {
+  position: relative;
+  top: 2px;
+}
+
+/* Register */
+.register-form{
+    width: 350px;
+    height: 450px;
+    background: white;
+    position: relative;
+    margin: 8% auto;
+    padding: 5px;
+}
+
+.register-form h1{
+    text-align: center;
+    color: #4941bf;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.input-data{
+    top: 100px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0px;
+    margin: 5px 20px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display : block;
+    margin: 50px 50px 0 50px;
+    color: lightblue;
+    background-color: #4941bf;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.login_link{
+    color: black;
+    margin-top: 0;
+    margin-left: 50px;
+    margin-bottom: 65px;
+    font-size: 15px;
+    text-align: center;
+}
+/* Footer */
+.register-footer {
+  width: 340px;
+  background-color: white;
+  align-items: center;
+  padding: 7px;
+}
+
+.register-footer .register-copy {
+  font-family: Arial, Helvetica, sans-serif;
+  color: lightblue;
+  text-align: center;
+  font-size: 12px;
+}
+
+.register-footer img {
+  position: relative;
+  top: 2px;
+}
