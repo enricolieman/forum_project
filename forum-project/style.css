@@ -97,6 +97,18 @@ h1 {
   padding: 20px;
 }
 
+.subforum-content { 
+  font-family: arial; 
+  font-size: 18px; 
+  color: black; 
+  background-color: white; 
+  padding: 20px; 
+} 
+ 
+.subforum-content > p { 
+  margin: 50px 20px; 
+}
+
 /* footer */
 
 .footer {
