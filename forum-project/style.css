@@ -322,6 +322,7 @@ button:hover {
   margin: 8% auto;
   padding: 5px;
   border-radius: 10%;
+  margin-top: 125px;
 }
 
 .login-form h1 {
@@ -407,6 +408,7 @@ button:hover {
   margin: 8% auto;
   padding: 5px;
   border-radius: 10%;
+  margin-top: 125px;
 }
 
 .register-form h1 {
