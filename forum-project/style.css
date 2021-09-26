@@ -28,8 +28,8 @@ h1 {
 /* home */
 
 /* navbar test */
-header{
-  display:flex;
+header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 70px;
@@ -37,20 +37,20 @@ header{
   font-size: 16px;
 }
 
-.logo{
+.logo {
   cursor: pointer;
 }
 
-.nav-area{
+.nav-area {
   list-style: none;
 }
-.nav-area li{
-  display:inline-block;
+.nav-area li {
+  display: inline-block;
   padding: 0px 30px;
   text-transform: uppercase;
 }
 
-.nav-area li::after{
+.nav-area li::after {
   content: ' ';
   width: 0%;
   height: 2px;
@@ -60,17 +60,17 @@ header{
   transition: 0.5s;
 }
 
-.nav-area li:hover::after{
+.nav-area li:hover::after {
   width: 100%;
 }
-.nav-area li a{
+.nav-area li a {
   transition: 0.3s;
   color: #fff;
 }
-.nav-area li a:hover{
-  color:#06d6a0;
+.nav-area li a:hover {
+  color: #06d6a0;
 }
-.btn-area{
+.btn-area {
   color: #fff;
   font-size: 16px;
   letter-spacing: 2px;
@@ -79,12 +79,10 @@ header{
   border-radius: 14px;
   background: #d22938;
 }
-.btn-area:hover{
+.btn-area:hover {
   cursor: pointer;
   background-color: transparent;
   border: 2px solid #d22938;
-  
-
 }
 
 /* navbar */
@@ -162,16 +160,16 @@ header{
   color: #fff;
 }
 
-.subforum-content { 
-  font-family: arial; 
-  font-size: 18px; 
-  color: black; 
-  background-color: white; 
-  padding: 20px; 
-} 
- 
-.subforum-content > p { 
-  margin: 50px 20px; 
+.subforum-content {
+  font-family: arial;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  padding: 20px;
+}
+
+.subforum-content > p {
+  margin: 50px 20px;
 }
 
 /* footer */
@@ -260,7 +258,7 @@ textarea.contact-form-text {
 .contact-form-btn:hover {
   background: transparent;
   border: 2px solid #06d6a0;
-  cursor: pointer ;
+  cursor: pointer;
   color: #06d6a0;
 }
 
@@ -271,7 +269,7 @@ textarea.contact-form-text {
   font-size: 12px;
   position: absolute;
   bottom: 20px;
-  left : 41%;
+  left: 41%;
 }
 /* /contact */
 
@@ -642,3 +640,15 @@ button:hover {
   }
 }
 
+/*subforum */
+.subforum-content {
+  font-family: arial;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  padding: 20px;
+}
+
+.subforum-content > p {
+  margin: 50px 20px;
+}
