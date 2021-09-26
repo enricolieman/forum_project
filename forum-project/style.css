@@ -7,8 +7,10 @@ body {
   margin: 0;
   font-size: 14px;
   font-family: 'Titillium Web', sans-serif;
-  background-color: #c7c2fc;
   color: #5e31fd;
+  background-image: url(img/person.png);
+  background-size: cover;
+  height: 100vh;
 }
 
 a {
@@ -24,6 +26,67 @@ h1 {
 }
 
 /* home */
+
+/* navbar test */
+header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.nav-area{
+  list-style: none;
+}
+.nav-area li{
+  display:inline-block;
+  padding: 0px 30px;
+  text-transform: uppercase;
+}
+
+.nav-area li::after{
+  content: ' ';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-area li:hover::after{
+  width: 100%;
+}
+.nav-area li a{
+  transition: 0.3s;
+  color: #fff;
+}
+.nav-area li a:hover{
+  color:#06d6a0;
+}
+.btn-area{
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 14px;
+  background: #d22938;
+}
+.btn-area:hover{
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #d22938;
+  
+
+}
+
 /* navbar */
 .navbar {
   z-index: 1;
@@ -96,6 +159,7 @@ h1 {
 .forum-info {
   margin-left: 30px;
   padding: 20px;
+  color: #fff;
 }
 
 .subforum-content { 
@@ -135,21 +199,23 @@ h1 {
 
 .contact h1 {
   text-align: center;
-  color: #4941bf;
-  margin: 50px auto;
+  color: #fff;
 }
 .border {
   width: 100px;
   height: 10px;
-  background: #4941bf;
+  background: #fff;
   margin: 10px auto;
+  border-radius: 20px;
 }
 
 .contact-form {
   max-width: 600px;
   margin: auto;
-  padding: 0 10px;
+  padding: 9px 10px;
   overflow: hidden;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .contact-form-text {
@@ -158,8 +224,8 @@ h1 {
   box-sizing: border-box;
   margin: 16px 0;
   border: 0;
-  border-radius: 5px;
-  background: #6158da;
+  border-radius: 20px;
+  background: #7d73ff;
   padding: 20px 40px;
   outline: none;
   color: #fff;
@@ -176,12 +242,12 @@ h1 {
 
 textarea.contact-form-text {
   resize: none;
-  height: 120px;
+  height: 130px;
 }
 .contact-form-btn {
   float: right;
-  border: 0;
-  background: #34495e;
+  border: 2px solid #06d6a0;
+  background-color: #06d6a0;
   color: #fff;
   padding: 12px 50px;
   border-radius: 20px;
@@ -189,9 +255,23 @@ textarea.contact-form-text {
   transition: 0.5s;
   position: relative;
   right: 220px;
+  font-size: medium;
 }
 .contact-form-btn:hover {
-  background: #2980b9;
+  background: transparent;
+  border: 2px solid #06d6a0;
+  cursor: pointer ;
+  color: #06d6a0;
+}
+
+.contact-copy {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  bottom: 20px;
+  left : 41%;
 }
 /* /contact */
 
@@ -205,7 +285,7 @@ section {
 }
 
 .content {
-  margin-top: 40px;
+  margin-top: 10px;
   background: #fff;
   display: flex;
   justify-content: center;
@@ -213,7 +293,11 @@ section {
   align-items: center;
   position: relative;
   left: 50%;
-  top: 8%;
+  top: 5%;
+  border-radius: 15%;
+  margin-bottom: 20px;
+  margin-left: 70px;
+  margin-right: 80px;
 }
 
 .content h2 {
@@ -311,6 +395,16 @@ button:hover {
   cursor: pointer;
   color: #06d6a0;
 }
+
+.about-copy {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+  bottom: 20px;
+}
+
 /* /about */
 
 /* login */
@@ -322,7 +416,7 @@ button:hover {
   margin: 8% auto;
   padding: 5px;
   border-radius: 10%;
-  margin-top: 125px;
+  margin-top: 90px;
 }
 
 .login-form h1 {
@@ -408,7 +502,7 @@ button:hover {
   margin: 8% auto;
   padding: 5px;
   border-radius: 10%;
-  margin-top: 125px;
+  margin-top: 90px;
 }
 
 .register-form h1 {
@@ -547,5 +641,4 @@ button:hover {
     font-size: 16px;
   }
 }
-
 
