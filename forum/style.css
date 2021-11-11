@@ -23,11 +23,6 @@ body {
   overflow: hidden;
   /* background-image: url(./img/person.png); */
 }
-#backgroundd{
-  position: absolute;
-  z-index: -1;
-  width: 1920px;
-}
 a {
   font-weight: bolder;
   color: #5e31fd;
