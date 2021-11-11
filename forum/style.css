@@ -8,11 +8,26 @@ body {
   font-size: 14px;
   font-family: 'Titillium Web', sans-serif;
   color: #5e31fd;
-  background-image: url(img/person.png);
   background-size: cover;
   height: 100vh;
+  background: url(./img/person.png) fixed center;
+  background-image: url(./img/person.png);
 }
-
+.wrap{
+  max-width: 1920px;
+  overflow: hidden;
+}
+.wrapper{
+  margin: 0 auto;
+  max-width: 1280px;
+  overflow: hidden;
+  /* background-image: url(./img/person.png); */
+}
+#backgroundd{
+  position: absolute;
+  z-index: -1;
+  width: 1920px;
+}
 a {
   font-weight: bolder;
   color: #5e31fd;
@@ -35,8 +50,14 @@ header {
   padding: 20px 70px;
   font-weight: 600;
   font-size: 16px;
+  z-index: 100;
 }
-
+header a, nav{
+  z-index: 1000;
+}
+body div .subforum-row{
+  z-index: 1000;
+}
 .logo {
   cursor: pointer;
 }
@@ -76,8 +97,10 @@ header {
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 10px 30px;
+  border: 2px solid #d22938;
   border-radius: 14px;
   background: #d22938;
+  transition: 0.5s;
 }
 .btn-area:hover {
   cursor: pointer;
@@ -127,6 +150,7 @@ header {
   border-radius: 5px;
   margin: 2px;
   font-size: 20px;
+  z-index: 10000;
 }
 
 .subforum-row {
