@@ -1,0 +1,39 @@
+<%- include('./header.ejs') %>
+  <body>
+    <div class="container" style="width: 800px; margin: auto">
+      <div class="subforum-content">
+        <br /><br />
+        <h2 id="title"></h2>
+        <div style="text-align: center">
+          <img id="urlImage" class="responsive"/>
+        </div>
+        <article id="content">
+      </article>
+      </div>
+    </div>
+  </body>
+  <script>
+ 
+$(document).ready(function() {
+
+      $.ajax({
+      type: "GET",
+      url: '/thread/<%= id %>/apiView',
+      success: function(data)
+      {
+        var content = data[0]['content'];
+        content = content.replace("\r");
+        content = content.split("\n");
+        var contents = '';
+        for(var x = 0; x<content.length; x++)
+        {
+          contents += "<p>"+content[x]+"</p>\n";
+        }
+        $("#title").html(data[0]['title']);
+        $("#content").html(contents);
+        $("#urlImage").attr('src',data[0]['urlImage']);
+      }
+  });
+});
+  </script>
+</html>

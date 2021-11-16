@@ -1,0 +1,87 @@
+<%- include('./header.ejs') %>
+  <body>
+    <div class="container" style="width: 800px; margin: auto">
+      <div class="subforum-content">
+      <form id="ThreadForm">
+        <input type="text" class="contact-form-text" id="title" placeholder="Title" required />
+        <input type="text" class="contact-form-text" id="urlImage" placeholder="Image Url" required />
+        <select id="subForum" class="contact-form-text">
+            <option value="1">Technology</option>
+            <option value="2">Sport</option>
+            <option value="3">E-Sport</option>
+            <option value="4">Entertainment</option>
+            <option value="5">Other</option>
+          </select>
+        <br>
+        <textarea id="content" class="contact-form-text"></textarea>
+        <% if(edit == true){ %>
+        <button id="editThread" type="button" class="submit-btn">Edit thread</button>
+        <% } else{ %>
+        <button id="postThread" type="button" class="submit-btn">Post thread</button>
+        <% } %>
+      </form>
+      </div>
+    </div>
+    <script>
+   
+  $(document).ready(function() {
+  
+    $('#editThread').click(function() {
+        var title = $("#title").val();
+        var subForum = $("#subForum").val();
+        var content = $('#content').val();
+        if(title.length == 0 || subForum.length == 0 || content.length == 0)
+        {
+            alert('All fields are required');
+        }
+        $.ajax({
+            type: "POST",
+            url: '/thread/<% if(edit == true){ %><%= id %>/edit<% } else { %>add<% } %>',
+            data: {
+              <% if(edit == true){ %>id: <%= id %>,  <% } %>
+                title: $("#title").val(),
+                subForum: $("#subForum").val(),
+                content: $("#content").val(),
+                urlImage: $("#urlImage").val()
+            },
+            beforeSend: function() {
+                swal.fire({
+                    html: '<h5>Please Wait</h5>',
+                    showConfirmButton: false,
+                    didOpen: () => {
+                        Swal.showLoading()
+                      },
+                });
+            },
+            success: function(data)
+            {
+                var data = JSON.parse(data);
+                if (data.error == 0) {
+                    window.location.replace('/');
+                }
+                else {
+                    alert(data.msg);
+                }
+            }
+        });
+
+    });
+
+    <% if(edit == true){ %>
+        $.ajax({
+        type: "GET",
+        url: '/thread/<%= id %>/apiView',
+        success: function(data)
+        {
+          var content = data[0]['content'];
+          content = content.replace("\r");
+          $("#title").val(data[0]['title']);
+          $("#content").val(content);
+          $("#urlImage").val(data[0]['urlImage']);
+        }
+    });
+  <% } %>
+  });
+    </script>
+  </body>
+</html>

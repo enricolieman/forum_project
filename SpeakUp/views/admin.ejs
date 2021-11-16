@@ -1,0 +1,43 @@
+<%- include('./header.ejs') %>
+    <div class="container">
+      <div class="subforum">
+        <div class="subforum-title">
+          <h1>Pesan masuk</h1>
+        </div>
+        <article id="forum">
+      </article>
+      <br>
+    <script>
+
+$(document).ready(function() {
+
+    $.ajax({
+        type: "GET",
+        url: '/contact/list',
+        success: function(data)
+        {
+          var insert = '';
+          var forum = '';
+          var lenn = data.length;
+          $("#latestHref2").attr('href', '/thread/'+data[lenn-1]['id']+'/view');
+          $("#latestTitle").html(data[lenn-1]['title']);
+          $("#latestAuthor").html(data[lenn-1]['postedBy']);
+          $("#topics").html(lenn);
+          for(var x = 0; x<lenn; x++)
+          {
+            var email = data[x].email;
+            var name = data[x].name;
+            var phone = data[x].phone;
+            var message = data[x].message.replace("\n", "<br>");
+            
+         insert += "<div class=\"subforum-row\">\n  <div class=\"subforum-icon subforum-column center\">\n    <span class=\"material-icons\"> forum </span>\n  </div>\n  <div class=\"subforum-description subforum-column center\">\n    <p>\n      <br />"+message+"\n    </p>\n  </div>\n  <div class=\"subforum-stats subforum-column center\">\n    <span>"+phone+" </span>\n  </div>\n  <div class=\"subforum-info subforum-column center\">\n    <p id=\"postedBy\"> "+name+"<br>"+email+"</p>\n  </div>\n</div>";
+            $("#forum").html(insert);
+        }
+        }
+    });
+  });
+
+
+
+    </script>
+    <%- include('./footer.ejs') %>

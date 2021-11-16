@@ -1,0 +1,73 @@
+<%- include('./header.ejs') %>
+    <div class="container">
+      <div class="subforum">
+        <div class="subforum-title">
+          <h1>Informasi Umum <% if(isLogin == 1){ %><a href="/thread/new"><button>Add new thread</a></button><% }%> </h1>
+        </div>
+        <article id="forum">
+      </article>
+
+    <div class="forum-info">
+      <div class="chart">Speak Up Forum - Stats &nbsp;<span class="material-icons" style="position: relative; top: 5px"> insert_chart </span></div>
+      <span><u id="topics"></u> Posts in <u>8</u> Topics</span><br />
+      <span
+        >Latest post: <b class="btsp" id="latestTitle"></b> Posted By: <b id="latestAuthor"></b></span
+      >.<br />
+      <span>Check <a id="latestHref2">the latest posts</a> .</span><br />
+    </div>
+    <script>
+
+$(document).ready(function() {
+
+    $.ajax({
+        type: "GET",
+        url: '/thread/list',
+        success: function(data)
+        {
+          var insert = '';
+          var forum = '';
+          var lenn = data.length;
+          $("#latestHref2").attr('href', '/thread/'+data[lenn-1]['id']+'/view');
+          $("#latestTitle").html(data[lenn-1]['title']);
+          $("#latestAuthor").html(data[lenn-1]['postedBy']);
+          $("#topics").html(lenn);
+          for(var x = 0; x<lenn; x++)
+          {
+            var content = data[x].content.split(".")[0]+" ";
+            var title = data[x].title;
+            var urlImage = data[x].urlImage;
+            var postedBy = data[x].postedBy.split("@")[0];
+            var id = data[x].id;
+            var subforum = data[x].subForum;
+            if(subforum == 1)
+            {
+              forum = "Technology";
+            }
+            else if(subforum == 2)
+            {
+              forum = "Sport";
+            }
+            else if(subforum == 3)
+            {
+              forum = "E-sport";
+            }
+            else if(subforum == 4)
+            {
+              forum = "Entertainment";
+            }
+            else
+            {
+              forum = "Other";
+            }
+            
+         insert += "<div class=\"subforum-row\">    <div class=\"subforum-icon subforum-column center\">      <span class=\"material-icons\"> forum </span>    </div>    <div class=\"subforum-description subforum-column center\">      <p>        <a href=\"/thread/"+id+"/view\" id=\"title\">"+title+"</a>        <br />"+content+"<a href=\"/thread/"+id+"/view\">Selengkapnya ...</a>      </p>    </div>    <div class=\"subforum-stats subforum-column center\">      <span>"+forum+"  </span>    </div>    <div class=\"subforum-info subforum-column center\">      <p id=\"postedBy\"> Posted by: "+postedBy+"</p>    </div>  </div>\n";
+            $("#forum").html(insert);
+        }
+        }
+    });
+  });
+
+
+
+    </script>
+    <%- include('./footer.ejs') %>
