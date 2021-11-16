@@ -1,0 +1,658 @@
+/* global */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Titillium Web', sans-serif;
+  color: #5e31fd;
+  background-image: url(/img/person.png);
+  background-size: cover;
+  height: 100vh;
+}
+
+a {
+  font-weight: bolder;
+  color: #5e31fd;
+  text-decoration: none;
+}
+
+h1 {
+  color: lightblue;
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+/* home */
+
+/* navbar test */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav-area {
+  list-style: none;
+}
+.nav-area li {
+  display: inline-block;
+  padding: 0px 30px;
+  text-transform: uppercase;
+}
+
+.nav-area li::after {
+  content: ' ';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-area li:hover::after {
+  width: 100%;
+}
+.nav-area li a {
+  transition: 0.3s;
+  color: #fff;
+}
+.nav-area li a:hover {
+  color: #06d6a0;
+}
+.btn-area {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 14px;
+  background: #d22938;
+}
+.btn-area:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #d22938;
+}
+
+/* navbar */
+.navbar {
+  z-index: 1;
+  overflow: hidden;
+  background-color: #4941bf;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: lightblue;
+  text-align: center;
+  padding: 13px 52px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  color: #c7c2fc;
+}
+
+/* content */
+
+.container {
+  margin: 20px;
+  padding: 20px;
+}
+
+.subforum {
+  margin-top: 20px;
+}
+
+.subforum-title {
+  background-color: #7d73ff;
+  padding: 2px 4px;
+  border-radius: 5px;
+  margin: 2px;
+  font-size: 20px;
+}
+
+.subforum-row {
+  margin-top: 10px;
+  background-color: #aacdf0;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 7% 60% 13% 20%;
+}
+
+.subforum-column {
+  padding: 10px;
+  margin: 4px 2px;
+  border-radius: 5px;
+  background-color: #dcf2fa;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subforum-info {
+  font-size: 12px;
+}
+
+.forum-info {
+  margin-left: 30px;
+  padding: 20px;
+  color: #fff;
+}
+
+.subforum-content {
+  font-family: arial;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  padding: 20px;
+}
+
+.subforum-content > p {
+  margin: 50px 20px;
+}
+
+/* footer */
+
+.footer {
+  background-color: #4941bf;
+  margin: auto;
+  padding: 10px;
+}
+
+.footer .copy {
+  font-family: Arial, Helvetica, sans-serif;
+  color: lightblue;
+  text-align: center;
+  font-size: 15px;
+}
+
+.footer img {
+  position: relative;
+  top: 2px;
+}
+/* /home */
+
+/* contact */
+
+.contact h1 {
+  text-align: center;
+  color: #fff;
+}
+.border {
+  width: 100px;
+  height: 10px;
+  background: #fff;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 9px 10px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.contact-form-text {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  border-radius: 20px;
+  background: #7d73ff;
+  padding: 20px 40px;
+  outline: none;
+  color: #fff;
+  transition: 0.5s;
+}
+.contact-form-text:focus {
+  box-shadow: 0 0 10px 4px #7d73ff;
+}
+
+::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+textarea.contact-form-text {
+  resize: none;
+  height: 130px;
+}
+.contact-form-btn {
+  float: right;
+  border: 2px solid #06d6a0;
+  background-color: #06d6a0;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  right: 220px;
+  font-size: medium;
+}
+.contact-form-btn:hover {
+  background: transparent;
+  border: 2px solid #06d6a0;
+  cursor: pointer;
+  color: #06d6a0;
+}
+
+.contact-copy {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  bottom: 20px;
+  left: 41%;
+}
+/* /contact */
+
+/* about */
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 90vh;
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.content {
+  margin-top: 10px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  top: 5%;
+  border-radius: 15%;
+  margin-bottom: 20px;
+  margin-left: 70px;
+  margin-right: 80px;
+}
+
+.content h2 {
+  text-transform: uppercase;
+  font-size: 36px;
+  letter-spacing: 6px;
+  opacity: 0.9;
+}
+
+.content span {
+  height: 0.5px;
+  width: 80px;
+  background: #777;
+  margin: 30px 0;
+}
+
+.content p {
+  padding-bottom: 15px;
+  font-weight: 300;
+  opacity: 0.7;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.links {
+  margin: 15px 0;
+}
+
+.links li {
+  border: 0.5px solid #777;
+  list-style: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 160px;
+  text-align: center;
+}
+
+.links li a {
+  text-transform: uppercase;
+  color: #777;
+  text-decoration: none;
+}
+
+.links li:hover {
+  border-color: #06d6a0;
+}
+
+.links li:hover a {
+  color: #06d6a0;
+}
+
+.vertical-line {
+  height: 30px;
+  width: 0.5px;
+  background: #777;
+  margin: 0 auto;
+}
+
+.icons {
+  display: flex;
+  padding: 15px 0;
+}
+
+.icons li {
+  display: block;
+  padding: 5px;
+  margin: 5px;
+}
+
+.icons li i {
+  font-size: 26px;
+  opacity: 0.8;
+}
+
+.icons li i:hover {
+  color: #06d6a0;
+}
+
+button {
+  background-color: #06d6a0;
+  color: #fff;
+  border: 3px solid transparent;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 13px 30px;
+  font-size: large;
+  border-radius: 30px;
+}
+
+button:hover {
+  background: transparent;
+  border: 3px solid #06d6a0;
+  cursor: pointer;
+  color: #06d6a0;
+}
+
+.about-copy {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+  bottom: 20px;
+}
+
+/* /about */
+
+/* login */
+.login-form {
+  width: 350px;
+  height: 450px;
+  background: white;
+  position: relative;
+  margin: 8% auto;
+  padding: 5px;
+  border-radius: 10%;
+  margin-top: 90px;
+}
+
+.login-form h1 {
+  text-align: center;
+  color: #4941bf;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.input-data {
+  top: 140px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0px;
+  margin: 5px 20px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: 50px 50px 0 50px;
+  color: lightblue;
+  background-color: #4941bf;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+
+.forget-pass {
+  margin-left: 20px;
+  margin-bottom: 75px;
+}
+
+.signup_link {
+  color: black;
+  margin-top: 0;
+  margin-left: 50px;
+  margin-bottom: 65px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.login-footer {
+  width: 340px;
+  align-items: center;
+  padding: 7px;
+}
+
+.login-footer .login-copy {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+  bottom: 20px;
+}
+
+.login-footer img {
+  position: relative;
+  top: 2px;
+}
+/* /login */
+
+/* register */
+.register-form {
+  width: 350px;
+  height: 450px;
+  background: white;
+  position: relative;
+  margin: 8% auto;
+  padding: 5px;
+  border-radius: 10%;
+  margin-top: 90px;
+}
+
+.register-form h1 {
+  text-align: center;
+  color: #4941bf;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.input-data {
+  top: 100px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0px;
+  margin: 5px 20px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: 50px 50px 0 50px;
+  color: lightblue;
+  background-color: #4941bf;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+
+.login_link {
+  color: black;
+  margin-top: 0;
+  margin-left: 50px;
+  margin-bottom: 65px;
+  font-size: 15px;
+  text-align: center;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+/* footer */
+.register-footer {
+  width: 340px;
+  align-items: center;
+  padding: 7px;
+}
+
+.register-footer .register-copy {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+  bottom: 20px;
+}
+
+.register-footer img {
+  position: relative;
+  top: 2px;
+}
+/* /register */
+
+/* for the smartphones */
+@media screen and (max-width: 460px) {
+  .navbar > a {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .navbar > a.logo {
+    position: relative;
+    bottom: 2px;
+    right: 5px;
+  }
+
+  .container {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .subforum-row {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 65% 35%;
+  }
+
+  .subforum-devider {
+    display: block;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(190, 190, 190, 0), rgba(255, 255, 255, 0.75), rgba(190, 190, 190, 0));
+  }
+}
+
+/* for the tablets and landscape smarthpones */
+@media screen and (min-width: 460px) and (max-width: 1366px) {
+  .navbar > a {
+    margin-left: 40px;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .navbar > a.logo {
+    position: relative;
+    top: 2px;
+  }
+
+  .container {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  .subforum-row {
+    display: grid;
+    grid-template-columns: 10% 60% 10% 20%;
+  }
+
+  .subforum-icon i {
+    font-size: 35px;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+}
+
+/*subforum */
+.subforum-content {
+  font-family: arial;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  padding: 20px;
+}
+
+.subforum-content > p {
+  margin: 50px 20px;
+}
