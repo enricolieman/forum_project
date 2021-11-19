@@ -29,7 +29,7 @@ router.post('/contact/add', (req, res) => {
             });
     
         })
-        res.send('{"error":0}');
+        res.send('{"erroor":0}');
     
     })
 
