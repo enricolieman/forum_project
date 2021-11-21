@@ -2,7 +2,7 @@
 
 ID LOGIN 
 Email : billybarlog11@gmail.com
-Pass  : Pisang123
+Pass  : pisang123
 
 Menu admin bisa di akses melalui /admin 
 
